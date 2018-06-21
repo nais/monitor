@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<html>
+<head>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        iframe {
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<iframe id="frame" src="" height="100%" width="100%"></iframe>
+<script type="text/javascript">
+    let setUrlForHostname = (hostname, frame) => {
+        return fetch('screenMap.json', {
+            method: 'get'
+        }).then(response => {
+            return response.json();
+        }).then(json => {
+            console.log('Retrieved screen map: ', json);
+            let ts = new Date().getTime(); // Just something that will change over time.
+            frame.src = json[hostname] + '&forceCacheRefreshTs=' + ts;
+        }).catch(err => {
+            console.log(err);
+        });
+    };
+
+    let hostnameRegex = new RegExp("[?&]hostname=([^&]+)");
+    let hostname = hostnameRegex.exec(window.location.href)[1];
+    let frame = document.getElementById("frame");
+    
+    console.log(hostname);
+
+    setUrlForHostname(hostname, frame);
+    setInterval(setUrlForHostname, 1000 * 60 * 60, hostname, frame);
+</script>
+</body>
+</html>
