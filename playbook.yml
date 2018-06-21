@@ -1,0 +1,76 @@
+- hosts: all
+  remote_user: pi
+  tasks:
+  - name: Set timezone
+    become: true
+    timezone:
+      name: Europe/Oslo
+  - name: Dist upgrade
+    become: true
+    apt:
+      update_cache: yes
+      upgrade: dist
+  - name: Upgrade all packages to the latest version
+    become: true
+    apt:
+      name: "*"
+      state: latest
+  - name: Ensure X packages are present
+    become: true
+    apt:
+      name: "{{item}}"
+      state: present
+      install_recommends: no
+    with_items:
+      - xserver-xorg
+      - xinit
+  - name: Ensure required packages are present
+    become: true
+    apt:
+      name: "{{item}}"
+      state: present
+    with_items:
+      - i3
+      - suckless-tools
+      - lxterminal
+      - vim
+      - chromium-browser
+      - xdotool
+  - name: Disable overscan (raspi-config)
+    command: raspi-config nonint do_overscan 1
+    become: true
+  - name: Copy autologin systemd conf
+    become: true
+    copy:
+      src: autologin.conf
+      dest: /etc/systemd/system/getty@tty1.service.d/autologin.conf
+  - name: Automatically start x for pi user
+    lineinfile:
+      path: /home/pi/.profile
+      line: '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx'
+  - name: Set up xinitrc for pi user
+    copy:
+      src: xinitrc
+      dest: /home/pi/.xinitrc
+      owner: pi
+  - name: Copy statusbar script
+    copy:
+      src: statusbar.sh
+      dest: /home/pi/statusbar.sh
+      owner: pi
+      mode: 'u+x'
+  - name: Ensure i3 config path exists for pi user
+    file:
+      path: /home/pi/.config/i3/
+      state: directory
+      owner: pi
+  - name: Set up i3 for pi user
+    copy:
+      src: i3.conf
+      dest: /home/pi/.config/i3/config
+      owner: pi
+  - name: Add chromium script for pi user
+    copy:
+      src: chromium.sh
+      dest: /home/pi/chromium.sh
+      owner: pi
