@@ -18,3 +18,9 @@ go get periph.io/x/bootstrap/img
     -wifi-ssid <SSID> \
     -wifi-psk <PSK>
 ```
+
+## Bootstrap
+Make sure inventory is up to date.
+```
+ansible-playbook playbook.yml -i inventory
+```
