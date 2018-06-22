@@ -4,9 +4,9 @@
     "rpi02": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi03": "https://grafana.adeo.no/d/cZBgeYVmz/nais-prod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi04": "https://grafana.adeo.no/d/K2ZKkE4ik/nais-prod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
-    "rpi10": "https://clients3.google.com/cast/chromecast/home",
-    "rpi11": "https://clients3.google.com/cast/chromecast/home",
-    "rpi12": "https://clients3.google.com/cast/chromecast/home",
-    "rpi13": "https://clients3.google.com/cast/chromecast/home",
-    "rpi14": "https://clients3.google.com/cast/chromecast/home"
+    "rpi10": "https://clients3.google.com/cast/chromecast/home?cachebust=1",
+    "rpi11": "https://clients3.google.com/cast/chromecast/home?cachebust=1",
+    "rpi12": "https://clients3.google.com/cast/chromecast/home?cachebust=1",
+    "rpi13": "https://clients3.google.com/cast/chromecast/home?cachebust=1",
+    "rpi14": "https://clients3.google.com/cast/chromecast/home?cachebust=1"
 }
