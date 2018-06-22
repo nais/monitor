@@ -1,3 +1,5 @@
+# vi: se ts=2 sts=2 sw=2 et:
+
 - hosts: all
   remote_user: pi
   tasks:
@@ -30,6 +32,7 @@
     with_items:
       - xserver-xorg
       - xinit
+      - lightdm
   - name: Ensure required packages are present
     become: true
     apt:
@@ -42,23 +45,21 @@
       - vim
       - chromium-browser
       - xdotool
+      - tmux
   - name: Disable overscan (raspi-config)
     command: raspi-config nonint do_overscan 1
     become: true
-  - name: Copy autologin systemd conf
-    become: true
+  - name: Set up lightdm configuration directory
+    file:
+      path: /etc/lightdm/lightdm.conf.d/
+      state: directory
+      owner: root
+      mode: 0755
+      recurse: true
+  - name: Automatically start x for pi user
     copy:
       src: autologin.conf
-      dest: /etc/systemd/system/getty@tty1.service.d/autologin.conf
-  - name: Automatically start x for pi user
-    lineinfile:
-      path: /home/pi/.profile
-      line: '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx'
-  - name: Set up xinitrc for pi user
-    copy:
-      src: xinitrc
-      dest: /home/pi/.xinitrc
-      owner: pi
+      dest: /etc/lightdm/lightdm.conf.d/12-autologin.conf
   - name: Copy statusbar script
     copy:
       src: statusbar.sh
@@ -75,8 +76,14 @@
       src: i3.conf
       dest: /home/pi/.config/i3/config
       owner: pi
-  - name: Add chromium script for pi user
+  - name: Ensure systemd config path exists for pi user
+    file:
+      path: /home/pi/.config/systemd/user/
+      state: directory
+      owner: pi
+      recurse: true
+  - name: Add chromium systemd unit for pi user
     copy:
-      src: chromium.sh
-      dest: /home/pi/chromium.sh
+      src: chromium.service
+      dest: /home/pi/.config/systemd/user/chromium.service
       owner: pi

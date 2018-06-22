@@ -22,5 +22,5 @@ go get periph.io/x/bootstrap/img
 ## Bootstrap
 Make sure inventory is up to date.
 ```
-ansible-playbook playbook.yml -i inventory
+ansible-playbook playbook.yml -i inventory -b
 ```
