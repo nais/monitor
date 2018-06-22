@@ -1,10 +1,10 @@
 - hosts: all
   remote_user: pi
   tasks:
-  - name: Refresh every hour
+  - name: Refresh every 30 minutes
     cron:
-      name: Refresh every hour
-      minute: 30
+      name: Refresh every 30 minutes
+      minute: "*/30"
       user: pi
       job: DISPLAY=:0.0 xdotool key F5
   - name: Set timezone
