@@ -33,6 +33,7 @@
       - xserver-xorg
       - xinit
       - lightdm
+      - unclutter
   - name: Ensure required packages are present
     become: true
     apt:
