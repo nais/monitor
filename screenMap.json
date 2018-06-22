@@ -1,12 +1,12 @@
 {
-    "rpi00": "https://url00",
-    "rpi01": "https://url01",
-    "rpi02": "https://url02",
-    "rpi03": "https://url03",
-    "rpi04": "https://url04",
-    "rpi10": "https://url00",
-    "rpi11": "https://url01",
-    "rpi12": "https://url02",
-    "rpi13": "https://url03",
-    "rpi14": "https://url04"
+    "rpi00": "https://grafana.adeo.no/d/O5kf9YVmz/nais-preprod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi01": "https://grafana.adeo.no/d/h9bdzPVmk/nais-preprod-iapp-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi02": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi03": "https://grafana.adeo.no/d/cZBgeYVmz/nais-prod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi04": "https://grafana.adeo.no/d/K2ZKkE4ik/nais-prod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi10": "https://vg.no?refresh=30s&orgId=1&kiosk",
+    "rpi11": "https://vg.no?refresh=30s&orgId=1&kiosk",
+    "rpi12": "https://vg.no?refresh=30s&orgId=1&kiosk",
+    "rpi13": "https://vg.no?refresh=30s&orgId=1&kiosk",
+    "rpi14": "https://vg.no?refresh=30s&orgId=1&kiosk"
 }
