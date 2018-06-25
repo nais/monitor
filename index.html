@@ -64,7 +64,7 @@
 
     let hostnameRegex = new RegExp("[?&]hostname=([^&]+)");
     let hostname = hostnameRegex.exec(window.location.href)[1];
-    let frame = document.getElementById("frame");
+    let frame = document.getElementById("grafana");
     
     console.log(hostname);
     refreshgrafana();
