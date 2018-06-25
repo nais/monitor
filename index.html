@@ -56,7 +56,7 @@
     
     let refreshgrafana = () => {
         let refreshgrafanaframe = document.getElementById("refreshgrafana");
-        console.log("grafana frame", grafanaframe);
+        console.log("grafana frame", refreshgrafanaframe);
         let ts = new Date().getTime(); // Just something that will change over time.
         let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
         refreshgrafanaframe.src = url;
