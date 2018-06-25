@@ -38,9 +38,7 @@
         }).then(response => {
             return response.json();
         }).then(json => {
-            console.log('Retrieved screen map: ', json);
-            let ts = new Date().getTime(); // Just something that will change over time.
-            frame.src = json[hostname] + '&forceCacheRefreshTs=' + ts;
+            frame.src = json[hostname];
         }).catch(err => {
             console.log(err);
         });
@@ -61,10 +59,10 @@
     
     console.log(hostname);
     refreshgrafana();
-    setInterval(refreshgrafana, 1000 * 60 * 10);
+    setInterval(refreshgrafana, 1000 * 60 * 1);
 
     setUrlForHostname(hostname, frame);
-    setInterval(setUrlForHostname, 1000 * 60 * 60, hostname, frame);
+    setInterval(setUrlForHostname, 1000 * 60 * 1, hostname, frame);
 </script>
 </body>
 </html>
