@@ -38,19 +38,21 @@
         }).then(response => {
             return response.json();
         }).then(json => {
-            frame.src = json[hostname];
+            if frame.src !== json[hostname] {
+                frame.src = json[hostname];
+            }
         }).catch(err => {
             console.log(err);
         });
     };
     
     let refreshgrafana = () => {
-         let grafanaframe = document.getElementById("refreshgrafana");
-         console.log("grafana frame", grafanaframe);
-         let ts = new Date().getTime(); // Just something that will change over time.
-         let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
-         grafanaframe.src = url;
-         console.log("grafana url", url);
+        let grafanaframe = document.getElementById("refreshgrafana");
+        console.log("grafana frame", grafanaframe);
+        let ts = new Date().getTime(); // Just something that will change over time.
+        let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
+        grafanaframe.src = url;
+        console.log("grafana url", url);
     };
 
     let hostnameRegex = new RegExp("[?&]hostname=([^&]+)");
