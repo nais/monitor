@@ -25,6 +25,9 @@
     </style>
 </head>
 <body>
+<iframe id="refreshgrafana" src="https://grafana.adeo.no/" height="0" width="0">
+  Your browser doesn't support iframes
+</iframe>
 <iframe id="frame" src="" height="100%" width="100%">
   Your browser doesn't support iframes
 </iframe>
@@ -42,12 +45,23 @@
             console.log(err);
         });
     };
+    
+    let refreshgrafana = () => {
+         let grafanaframe = document.getElementById("refreshgrafana");
+         console.log("grafana frame", grafanaframe);
+         let ts = new Date().getTime(); // Just something that will change over time.
+         let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
+         grafanaframe.src = url;
+         console.log("grafana url", url);
+    };
 
     let hostnameRegex = new RegExp("[?&]hostname=([^&]+)");
     let hostname = hostnameRegex.exec(window.location.href)[1];
     let frame = document.getElementById("frame");
     
     console.log(hostname);
+    refreshgrafana();
+    setInterval(refreshgrafana, 1000 * 60 * 10);
 
     setUrlForHostname(hostname, frame);
     setInterval(setUrlForHostname, 1000 * 60 * 60, hostname, frame);
