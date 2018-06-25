@@ -8,7 +8,7 @@
             margin: 0;
         }
 
-        iframe {
+        #grafana {
             position:fixed;
             top:0px;
             left:0px;
@@ -22,17 +22,24 @@
             overflow:hidden;
             z-index:999999;
         }
+        
+        #refreshgrafana {
+            position: fixed;
+            width: 0;
+            height: 0;
+            display: none;
+        }
     </style>
 </head>
 <body>
-<iframe id="refreshgrafana" src="https://grafana.adeo.no/" height="0" width="0">
+<iframe id="refreshgrafana" src="https://grafana.adeo.no/">
   Your browser doesn't support iframes
 </iframe>
-<iframe id="frame" src="" height="100%" width="100%">
+<iframe id="grafana" src="">
   Your browser doesn't support iframes
 </iframe>
 <script type="text/javascript">
-    let setUrlForHostname = (hostname, frame) => {
+    let setUrlForHostname = (hostname, grafana) => {
         return fetch('screenMap.json', {
             method: 'get'
         }).then(response => {
@@ -47,11 +54,11 @@
     };
     
     let refreshgrafana = () => {
-        let grafanaframe = document.getElementById("refreshgrafana");
+        let refreshgrafanaframe = document.getElementById("refreshgrafana");
         console.log("grafana frame", grafanaframe);
         let ts = new Date().getTime(); // Just something that will change over time.
         let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
-        grafanaframe.src = url;
+        refreshgrafanaframe.src = url;
         console.log("grafana url", url);
     };
 
