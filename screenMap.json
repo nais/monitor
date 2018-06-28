@@ -1,7 +1,7 @@
 {
-    "rpi00": "https://grafana.adeo.no/d/I17iEommz/kafka-overview?refresh=1m&orgId=1&kiosk",
-    "rpi01": "https://grafana.adeo.no/d/O5kf9YVmz/nais-preprod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
-    "rpi02": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi00": "https://grafana.adeo.no/d/O5kf9YVmz/nais-preprod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi01": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi02": "https://grafana.adeo.no/d/I17iEommz/kafka-overview?refresh=1m&orgId=1&kiosk",
     "rpi03": "https://grafana.adeo.no/d/cZBgeYVmz/nais-prod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi04": "https://grafana.adeo.no/d/K2ZKkE4ik/nais-prod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi10": "https://clients3.google.com/cast/chromecast/home?cachebust=1",
