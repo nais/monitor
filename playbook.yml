@@ -25,11 +25,6 @@
     become: true
     timezone:
       name: Europe/Oslo
-  - name: Dist upgrade
-    become: true
-    apt:
-      update_cache: yes
-      upgrade: dist
   - name: Upgrade all packages to the latest version
     become: true
     apt:
@@ -46,6 +41,8 @@
       - xinit
       - lightdm
       - unclutter
+      - imagemagick
+      - bc
   - name: Ensure required packages are present
     become: true
     apt:
