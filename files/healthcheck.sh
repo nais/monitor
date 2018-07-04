@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DISPLAY=:0.0
+export DISPLAY=:0.0
 
 import -window root screen.png
 sum=`convert screen.png -resize 1x1 txt:- | grep -o "srgb\(.*\)" | grep -oP "\d+,\d+,\d+" | sed 's/,/+/g' | bc`
