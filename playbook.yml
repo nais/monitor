@@ -3,10 +3,22 @@
 - hosts: all
   remote_user: pi
   tasks:
-  - name: Refresh every 30 minutes
+  - name: Copy healthcheck script
+    copy:
+      src: healthcheck.sh
+      dest: /home/pi/healthcheck.sh
+      owner: pi
+      mode: 'u+x'
+  - name: Schedule healthcheck
     cron:
-      name: Refresh every 30 minutes
-      minute: "*/30"
+      name: Perform healthcheck every minute
+      user: pi
+      job: /home/pi/healthcheck.sh
+  - name: Schedule refresh every 8 hours
+    cron:
+      name: Refresh every 8 hours
+      minute: "0"
+      hour: "*/8"
       user: pi
       job: DISPLAY=:0.0 xdotool key F5
   - name: Set timezone
