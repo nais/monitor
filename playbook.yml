@@ -30,7 +30,7 @@
     apt:
       name: "*"
       state: latest
-  - name: Ensure X packages are present
+  - name: Ensure packages are present (no install recommends)
     become: true
     apt:
       name: "{{item}}"
@@ -43,7 +43,7 @@
       - unclutter
       - imagemagick
       - bc
-  - name: Ensure required packages are present
+  - name: Ensure packages are present (install recommends)
     become: true
     apt:
       name: "{{item}}"
