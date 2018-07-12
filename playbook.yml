@@ -14,6 +14,17 @@
       name: Perform healthcheck every minute
       user: pi
       job: /home/pi/healthcheck.sh
+  - name: Copy disable_fullscreen script
+    copy:
+      src: disable_fullscreen.sh
+      dest: /home/pi/disable_fullscreen.sh
+      owner: pi
+      mode: 'u+x'
+  - name: Schedule disable fullscreen every minute (to show i3-bar)
+    cron:
+      name: Disable fullscreen every minute
+      user: pi
+      job: /home/pi/disable_fullscreen.sh
   - name: Schedule refresh every 8 hours
     cron:
       name: Refresh every 8 hours
@@ -66,10 +77,12 @@
       owner: root
       mode: 0755
       recurse: true
+    become: true
   - name: Automatically start x for pi user
     copy:
       src: autologin.conf
       dest: /etc/lightdm/lightdm.conf.d/12-autologin.conf
+    become: true
   - name: Copy statusbar script
     copy:
       src: statusbar.sh
