@@ -5,8 +5,7 @@ This provisioner will format your SD card with Raspbian, deploy a `wpa_supplican
 ## Setting up
 
 ```
-go get github.com/rekby/mbr
-go get periph.io/x/bootstrap/img
+make
 ```
 
 ## Usage
