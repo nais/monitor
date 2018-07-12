@@ -1,12 +1,12 @@
 {
-    "rpi00": "https://grafana.adeo.no/d/O5kf9YVmz/nais-preprod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
-    "rpi01": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
-    "rpi02": "https://grafana.adeo.no/d/I17iEommz/kafka-overview?refresh=1m&orgId=1&kiosk",
+    "rpi00": "https://grafana.adeo.no/d/I17iEommz/kafka-overview?refresh=1m&orgId=1&kiosk",
+    "rpi01": "https://grafana.adeo.no/d/O5kf9YVmz/nais-preprod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
+    "rpi02": "https://grafana.adeo.no/d/HcXdzPVmz/nais-preprod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi03": "https://grafana.adeo.no/d/cZBgeYVmz/nais-prod-fss-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
     "rpi04": "https://grafana.adeo.no/d/K2ZKkE4ik/nais-prod-sbs-single-page-cluster-dashboard?refresh=30s&orgId=1&kiosk",
-    "rpi10": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-fss&var-service=All&from=now-1h&to=now&kiosk",
-    "rpi11": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-sbs&var-service=All&from=now-1h&to=now&kiosk",
-    "rpi12": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
+    "rpi10": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
+    "rpi11": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-fss&var-service=All&from=now-1h&to=now&kiosk",
+    "rpi12": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-sbs&var-service=All&from=now-1h&to=now&kiosk",
     "rpi13": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=prod-fss&var-service=All&from=now-1h&to=now&kiosk",
     "rpi14": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=prod-sbs&var-service=All&from=now-1h&to=now&kiosk"
 }
