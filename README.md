@@ -12,6 +12,7 @@ go get periph.io/x/bootstrap/img
 ## Usage
 
 ```
+make build
 ./provision \
     -v \
     -board raspberrypi \
