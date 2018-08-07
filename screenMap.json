@@ -8,5 +8,5 @@
     "rpi11": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-fss&var-service=All&from=now-1h&to=now&kiosk",
     "rpi12": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=preprod-sbs&var-service=All&from=now-1h&to=now&kiosk",
     "rpi13": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=prod-fss&var-service=All&from=now-1h&to=now&kiosk",
-    "rpi14": "https://grafana.adeo.no/d/000000262/traefik-stats?refresh=1m&orgId=1&var-datasource=prod-sbs&var-service=All&from=now-1h&to=now&kiosk"
+    "rpi14": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk"
 }
