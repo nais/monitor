@@ -25,13 +25,13 @@
       name: Disable fullscreen every minute
       user: pi
       job: /home/pi/disable_fullscreen.sh
-  - name: Schedule refresh every 8 hours
+  - name: Schedule restart chromium every 8 hours
     cron:
-      name: Refresh every 8 hours
+      name: Restart chromium every 8 hours
       minute: "0"
       hour: "*/8"
       user: pi
-      job: DISPLAY=:0.0 xdotool key F5
+      job: systemctl --user restart chromium
   - name: Set timezone
     become: true
     timezone:
