@@ -31,7 +31,7 @@
       minute: "0"
       hour: "*/8"
       user: pi
-      job: systemctl --user restart chromium
+      job: killall chromium
   - name: Set timezone
     become: true
     timezone:
