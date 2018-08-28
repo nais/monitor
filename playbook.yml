@@ -111,3 +111,10 @@
       src: chromium.service
       dest: /home/pi/.config/systemd/user/chromium.service
       owner: pi
+  - name: Reload chromium systemd service
+    systemd:
+      enabled: true
+      daemon_reload: true
+      name: chromium
+      user: yes
+      state: restarted

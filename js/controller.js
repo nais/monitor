@@ -12,7 +12,7 @@ setInterval(refreshgrafana, 1000 * 60 * 1);
 
 // Check if screenMap has changed every minute and update iframe src
 let setUrlForHostname = (hostname, screenMapUrl, grafana) => {
-  return fetch(screenMapUrl, {
+  return fetch(unescape(screenMapUrl), {
     method: 'get'
   }).then(response => {
     return response.json();
