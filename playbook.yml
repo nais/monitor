@@ -31,7 +31,7 @@
       minute: "0"
       hour: "*/8"
       user: pi
-      job: killall chromium
+      job: killall chromium-browser
   - name: Set timezone
     become: true
     timezone:
@@ -48,6 +48,7 @@
       state: present
       install_recommends: no
     with_items:
+      - postfix
       - xserver-xorg
       - xinit
       - lightdm
