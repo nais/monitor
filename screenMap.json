@@ -7,6 +7,6 @@
     "rpi10": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
     "rpi11": "https://www.vondess.com/mannen/api",
     "rpi12": "https://www.vondess.com/veslemannen/api",
-    "rpi13": "https://erdetfreddah.synth.no/",
+    "rpi13": "https://erdetfreddah.synth.no/?rss",
     "rpi14": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk"
 }
