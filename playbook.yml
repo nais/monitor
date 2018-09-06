@@ -31,7 +31,7 @@
       minute: "0"
       hour: "*/8"
       user: pi
-      job: systemctl --user restart chromium
+      job: killall chromium-browser
   - name: Set timezone
     become: true
     timezone:
@@ -48,6 +48,7 @@
       state: present
       install_recommends: no
     with_items:
+      - postfix
       - xserver-xorg
       - xinit
       - lightdm
@@ -110,3 +111,10 @@
       src: chromium.service
       dest: /home/pi/.config/systemd/user/chromium.service
       owner: pi
+  - name: Reload chromium systemd service
+    systemd:
+      enabled: true
+      daemon_reload: true
+      name: chromium
+      user: yes
+      state: restarted

@@ -2,34 +2,7 @@
 <meta charset="UTF-8"/>
 <html>
 <head>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
-
-        #grafana {
-            position:fixed;
-            top:0px;
-            left:0px;
-            bottom:0px;
-            right:0px;
-            width:100%;
-            height:100%;
-            border:none;
-            margin:0;
-            padding:0;
-            overflow:hidden;
-            z-index:999999;
-        }
-        
-        #refreshgrafana {
-            position: fixed;
-            width: 0;
-            height: 0;
-            display: none;
-        }
-    </style>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 </head>
 <body>
 <iframe id="refreshgrafana" src="https://grafana.adeo.no/">
@@ -38,41 +11,6 @@
 <iframe id="grafana" src="">
   Your browser doesn't support iframes
 </iframe>
-<script type="text/javascript">
-    let setUrlForHostname = (hostname, grafana) => {
-        return fetch('screenMap.json', {
-            method: 'get'
-        }).then(response => {
-            return response.json();
-        }).then(json => {
-            console.log("screenMap: ", json);
-            if (frame.src !== json[hostname]) {
-                frame.src = json[hostname];
-            }
-        }).catch(err => {
-            console.log(err);
-        });
-    };
-    
-    let refreshgrafana = () => {
-        let refreshgrafanaframe = document.getElementById("refreshgrafana");
-        console.log("grafana frame", refreshgrafanaframe);
-        let ts = new Date().getTime(); // Just something that will change over time.
-        let url = "https://grafana.adeo.no/" + '?forceCacheRefreshTs=' + ts;
-        refreshgrafanaframe.src = url;
-        console.log("grafana url", url);
-    };
-
-    let hostnameRegex = new RegExp("[?&]hostname=([^&]+)");
-    let hostname = hostnameRegex.exec(window.location.href)[1];
-    let frame = document.getElementById("grafana");
-    
-    console.log(hostname);
-    refreshgrafana();
-    setInterval(refreshgrafana, 1000 * 60 * 1);
-
-    setUrlForHostname(hostname, frame);
-    setInterval(setUrlForHostname, 1000 * 60 * 1, hostname, frame);
-</script>
+<script type="text/javascript" src="js/controller.js"></script>
 </body>
 </html>
