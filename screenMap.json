@@ -5,7 +5,7 @@
     "rpi03": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
     "rpi04": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
     "rpi10": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
-    "rpi11": "https://nais.io/monitor/static/1.png",
+    "rpi11": "https://1337.desperate.solutions/",
     "rpi12": "https://nais.io/monitor/static/2.png",
     "rpi13": "https://nais.io/monitor/static/3.png",
     "rpi14": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk"
