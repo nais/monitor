@@ -5,8 +5,8 @@
     "rpi03": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
     "rpi04": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
     "rpi10": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
-    "rpi11": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=dev-gke&kiosk",
-    "rpi12": "http://snart-helg.com/",
-    "rpi13": "https://1337.desperate.solutions/",
+    "rpi11": "https://1337.desperate.solutions/http://snart-helg.com/",
+    "rpi12": "https://1337.desperate.solutions/http://snart-helg.com/",
+    "rpi13": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=dev-gke&kiosk",
     "rpi14": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk"
 }
