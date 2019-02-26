@@ -12,7 +12,7 @@
     "lumen09": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
 
     "lumen10": "https://1337.desperate.solutions/",
-    "rpi01": "https://1337.desperate.solutions/",
-    "rpi04": "https://1337.desperate.solutions/",
-    "rpi13": "https://1337.desperate.solutions/"
+    "rpi01": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
+    "rpi04": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
+    "rpi13": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk"
 }
