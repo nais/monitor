@@ -11,5 +11,8 @@
     "lumen08": "https://grafana.adeo.no/d/I17iEommz/kafka-overview?refresh=1m&orgId=1&kiosk",
     "lumen09": "https://grafana.adeo.no/d/RL1x_aZik/kafka-alerts?refresh=30s&orgId=1&kiosk",
 
-    "lumen10": "https://1337.desperate.solutions/"
+    "lumen10": "https://1337.desperate.solutions/",
+    "rpi01": "https://1337.desperate.solutions/",
+    "rpi04": "https://1337.desperate.solutions/",
+    "rpi13": "https://1337.desperate.solutions/"
 }
