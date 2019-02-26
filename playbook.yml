@@ -26,6 +26,16 @@
       dest: /home/pi/healthcheck.sh
       owner: pi
       mode: 'u+x'
+  - name: Creates an entry like "DISPLAY=:0.0" on top of crontab
+    cron:
+      name: DISPLAY
+      env: yes
+      value: ":0.0"
+  - name: Schedule move mouse out of screen
+    cron:
+      name: Move mouse out of screen
+      user: pi
+      job: /usr/bin/xdotool mousemove 2000 2000 > /dev/null
   - name: Schedule healthcheck
     cron:
       name: Perform healthcheck every minute
@@ -69,7 +79,6 @@
       - xserver-xorg
       - xinit
       - lightdm
-      - unclutter
       - imagemagick
       - bc
   - name: Ensure packages are present (install recommends)
