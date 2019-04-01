@@ -1,11 +1,11 @@
 all:
   hosts:
-   #lumen01:
-   #  ansible_port: 80
-   #  ansible_host: 1.2.3.4
-   #lumen02:
-   #  ansible_port: 80
-   #  ansible_host: 1.2.3.4
+    lumen01:
+      ansible_port: 80
+      ansible_host: 172.30.8.86
+    lumen02:
+      ansible_port: 80
+      ansible_host: 172.30.12.52
     lumen03:
       ansible_host: 172.30.8.91
     lumen04:
@@ -13,15 +13,15 @@ all:
     lumen05:
       ansible_host: 172.30.8.90
     lumen06:
-      ansible_host: 172.30.8.83
-   #lumen07:
-   #  ansible_port: 80
-   #  ansible_host: 1.2.3.4
-   #lumen08:
-   #  ansible_port: 80
-   #  ansible_host: 1.2.3.4
-    lumen09:
-      ansible_host: 172.30.8.87
+      ansible_port: 80
+      ansible_host: 172.30.8.94
+    lumen07:
+      ansible_port: 80
+      ansible_host: 172.30.8.89
+    lumen08:
+      ansible_host: 172.30.12.60
+   #lumen09:
+   #  ansible_host: 172.30.8.87
     lumen10:
       ansible_host: 172.30.12.53
     lumen11:
