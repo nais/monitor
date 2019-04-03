@@ -14,6 +14,14 @@
       dest: /etc/hosts
       regexp: "^{{ ansible_default_ipv4.address }}.+$"
       line: "{{ ansible_default_ipv4.address }} {{ ansible_fqdn }} {{ ansible_hostname }}"
+  - name: configure display env var in bashrc
+    lineinfile:
+      dest: /home/pi/.bashrc
+      line: "export DISPLAY=:0.0"
+  - name: configure HDMI hotplug
+    lineinfile:
+      dest: /boot/config.txt
+      line: "hdmi_force_hotplug=1"
   - name: Copy grafana_logo
     copy:
       src: grafana_logo.png
