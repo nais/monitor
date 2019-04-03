@@ -19,6 +19,7 @@
       dest: /home/pi/.bashrc
       line: "export DISPLAY=:0.0"
   - name: configure HDMI hotplug
+    become: true
     lineinfile:
       dest: /boot/config.txt
       line: "hdmi_force_hotplug=1"
