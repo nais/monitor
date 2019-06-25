@@ -13,5 +13,5 @@
     "lumen09": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-fss&kiosk",
     "lumen10": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-sbs&kiosk",
     "lumen11": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
-    "lumen12": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk"
+    "lumen12": "https://grafana.adeo.no/d/xdXVt6nZz/loginservice?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk"
 }
