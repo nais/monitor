@@ -20,7 +20,7 @@ all:
    #  ansible_host: 172.28.8.87
     lumen10:
       ansible_host: 172.28.32.192
-    lumen11:
-      ansible_host: 172.28.12.127
+   #lumen11:
+   #  luansible_host: 172.28.12.127
     lumen12:
       ansible_host: 172.28.32.194
