@@ -1,17 +1,17 @@
 {
-    "lumen01": "https://1337.desperate.solutions/",
-    "lumen02": "http://www.snart-helg.com/",
+    "lumen01": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk",
+    "lumen02": "http://1337.desperate.solutions/",
 
-    "lumen03": "https://1337.desperate.solutions/",
-    "lumen04": "http://www.snart-helg.com/",
-    "lumen05": "https://friday.horse/",
-    "lumen06": "https://erdetfredag.dk/",
+    "lumen03": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-fss&kiosk",
+    "lumen04": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-sbs&kiosk",
+    "lumen05": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
+    "lumen06": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
 
-    "lumen07": "https://1337.desperate.solutions/",
-    "lumen08": "http://www.snart-helg.com/",
+    "lumen07": "https://grafana.adeo.no/d/ppUv1Eemk/deployment-orchestrator?refresh=1m&orgId=1&kiosk",
+    "lumen08": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk",
 
-    "lumen09": "https://1337.desperate.solutions/",
-    "lumen10": "http://www.snart-helg.com/",
-    "lumen11": "https://friday.horse/",
-    "lumen12": "https://erdetfredag.dk/"
+    "lumen09": "http://1337.desperate.solutions/",
+    "lumen10": "http://1337.desperate.solutions/",
+    "lumen11": "http://1337.desperate.solutions/",
+    "lumen12": "http://1337.desperate.solutions/"
 }
