@@ -7,7 +7,7 @@
     "lumen05": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-fss&kiosk",
     "lumen06": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
 
-    "lumen07": "https://grafana.adeo.no/d/ppUv1Eemk/deployment-orchestrator?refresh=1m&orgId=1&kiosk",
+    "lumen07": "https://grafana.adeo.no/d/hj6KUPHZk/deployment-status?refresh=1m&orgId=1&kiosk",
     "lumen08": "https://grafana.adeo.no/d/ft-QQfHWk/deployment-overview?refresh=1m&orgId=1&kiosk",
 
     "lumen09": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-fss&kiosk",
