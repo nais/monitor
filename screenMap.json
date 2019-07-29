@@ -1,6 +1,6 @@
 {
     "lumen01": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk",
-    "lumen02": "http://www.snart-helg.com/",
+    "lumen02": "https://grafana.adeo.no/d/ft-QQfHWk/deployment-overview?orgId=1&refresh=1m&kiosk",
 
     "lumen03": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-fss&var-newCluster=dev-fss&kiosk",
     "lumen04": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=preprod-sbs&var-newCluster=dev-sbs&kiosk",
