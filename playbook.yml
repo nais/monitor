@@ -61,13 +61,26 @@
       name: Disable fullscreen every minute
       user: pi
       job: /home/pi/disable_fullscreen.sh > /dev/null
+  - name: Inform abut self to stdout webservice
+    cron:
+      name: Inform abut self to stdout webservice
+      hour: "*"
+      minute: "*"
+      user: pi
+      job: curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
+  - name: Reboot daily at 13
+    cron:
+      name: Reboot daily at 13
+      hour: "13"
+      user: root
+      job: reboot
   - name: Schedule restart chromium every 8 hours
     cron:
       name: Restart chromium every 8 hours
       minute: "0"
       hour: "*/8"
       user: pi
-      job: killall chromium-browser > /dev/null
+      job: killall chromium-browser-v7 > /dev/null
   - name: Set timezone
     become: true
     timezone:
