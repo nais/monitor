@@ -70,6 +70,7 @@
       job: |
         curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
   - name: Reboot daily at 13
+    become: true
     cron:
       name: Reboot daily at 13
       hour: "13"
