@@ -67,7 +67,8 @@
       hour: "*"
       minute: "*"
       user: pi
-      job: curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
+      job: |
+        curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
   - name: Reboot daily at 13
     cron:
       name: Reboot daily at 13
