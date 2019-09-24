@@ -69,6 +69,15 @@
       user: pi
       job: |
         curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
+  - name: Reboot if no internetz
+    become: true
+    cron:
+      name: Reboot if no internetz
+      hour: "*"
+      minute: "*/10"
+      user: root
+      job: ping -c 5 -o 8.8.8.8 || reboot
+
   - name: Reboot daily at 13
     become: true
     cron:
