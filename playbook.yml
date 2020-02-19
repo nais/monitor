@@ -18,11 +18,17 @@
     lineinfile:
       dest: /home/pi/.bashrc
       line: "export DISPLAY=:0.0"
-  - name: configure HDMI hotplug
+  - name: Set right resolution on start
     become: true
     lineinfile:
+      line: "{{ item }}"
       dest: /boot/config.txt
-      line: "hdmi_force_hotplug=1"
+    loop:
+    - framebuffer_width=1920
+    - framebuffer_height=1080
+    - hdmi_force_hotplug=1
+    - hdmi_group=1
+    - hdmi_mode=16
   - name: Copy grafana_logo
     copy:
       src: grafana_logo.png
@@ -67,8 +73,8 @@
       hour: "*"
       minute: "*"
       user: pi
-      job: |
-        curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/
+      job: 'curl -H "ip: $(hostname -i)" -H "hostname: $(hostname)" https://logheaders.desperate.solutions/'
+
   - name: Reboot if no internetz
     become: true
     cron:
@@ -162,3 +168,4 @@
       name: chromium
       scope: user
       state: restarted
+
