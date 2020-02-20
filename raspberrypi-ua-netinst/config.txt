@@ -1,0 +1,10 @@
+[all]
+initramfs raspberrypi-ua-netinst/raspberrypi-ua-netinst.cpio.gz
+gpu_mem=16
+[pi3]
+enable_uart=1
+framebuffer_width=1920
+framebuffer_height=1080
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=82
