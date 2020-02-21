@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while [ "`ip addr show dev wlan0 | grep 'inet '`" == "" ]; do
+	echo "waiting 1 sec for IP address on wlan0..."
+	sleep 1
+done
+
+echo 'Raspbian GNU/Linux 10 \\n \\l' > /etc/issue
+echo >> /etc/issue
+ip addr show dev wlan0 >> /etc/issue
+echo >> /etc/issue
