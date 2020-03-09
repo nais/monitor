@@ -1,0 +1,16 @@
+# To customize the raspberrypi-unattended-installer:
+#
+# Place your settings in this file as described in the README.md or in the advanced documentation.
+
+packages=python,vim,nano
+firmware_packages=1
+timezone=CET
+username=pi
+userpw=bestpasswordever
+ifname=wlan0
+userperms_admin=1
+keyboard_layout=us
+
+# please configure these
+#wlan_psk=
+#wlan_ssid=
