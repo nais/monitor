@@ -7,7 +7,7 @@
 CSSH="cssh"
 
 inventory=`mktemp`
-yq r inventory.yaml 'all.hosts.*.ansible_host' | awk '{print "pi@" $2}' > $inventory
+yq r inventory.yaml 'all.hosts.*.ansible_host' | awk '{print "pi@" $1}' > $inventory
 
 $CSSH -f $inventory
 

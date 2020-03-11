@@ -119,8 +119,10 @@
       name: ["i3", "suckless-tools", "lxterminal", "vim", "chromium-browser", "xdotool", "tmux"]
       state: present
   - name: Disable overscan (raspi-config)
-    command: raspi-config nonint do_overscan 1
     become: true
+    lineinfile:
+      dest: /boot/config.txt
+      line: disable_overscan=1
   - name: Set up lightdm configuration directory
     file:
       path: /etc/lightdm/lightdm.conf.d/
