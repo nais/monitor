@@ -8,10 +8,10 @@
     "lumen06": "https://grafana.adeo.no/d/0nmGteKmz/nais-cluster?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk",
 
     "lumen07": "https://grafana.adeo.no/d/hj6KUPHZk/deployment-status?refresh=1m&orgId=1&kiosk",
-    "lumen08": "https://grafana.adeo.no/d/ft-QQfHWk/deployment-overview?refresh=1m&orgId=1&kiosk",
+    "lumen08": "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
 
     "lumen09": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk",
     "lumen10": "https://grafana.adeo.no/d/lBpUC5cik/nais-cluster-overview?refresh=1m&orgId=1&kiosk",
-    "lumen11": "https://www.yr.no/place/Norway/Oslo/Oslo/Sannergata/hour_by_hour.html",
+    "lumen11": "https://grafana.adeo.no/d/ft-QQfHWk/deployment-overview?refresh=1m&orgId=1&kiosk",
     "lumen12": "https://grafana.adeo.no/d/xdXVt6nZz/loginservice?refresh=1m&orgId=1&var-cluster=prod-sbs&kiosk"
 }
