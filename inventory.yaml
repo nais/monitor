@@ -1,26 +1,26 @@
 all:
   hosts:
-    #lumen01:
-      #ansible_host: 172.28.1.119
-    #lumen02:
-      #ansible_host: 172.28.51.242
+    lumen01:
+      ansible_host: 172.28.1.119
+    lumen02:
+      ansible_host: 172.28.51.242
     lumen03:
       ansible_host: 172.28.24.136
-    #lumen04:
-      #ansible_host: 172.28.20.130
-    #lumen05:
-      #ansible_host: 172.28.10.128
-    #lumen06:
-      #ansible_host: 172.28.23.139
-    #lumen07:
-      #ansible_host: 172.28.0.21
-    #lumen08:
-      #ansible_host: 172.28.32.193
+    lumen04:
+      ansible_host: 172.28.20.130
+    lumen05:
+      ansible_host: 172.28.10.128
+    lumen06:
+      ansible_host: 172.28.23.139
+    lumen07:
+      ansible_host: 172.28.0.21
+    lumen08:
+      ansible_host: 172.28.32.193
     lumen09:
      ansible_host: 172.28.24.110
     lumen10:
       ansible_host: 172.28.24.94
     lumen11:
       ansible_host: 172.28.24.82
-    #lumen12:
-      #ansible_host: 172.28.32.194
+    lumen12:
+      ansible_host: 172.28.32.194
