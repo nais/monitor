@@ -35,6 +35,12 @@
       dest: /home/pi/grafana_logo.png
       owner: pi
       mode: 'u+r'
+  - name: Copy login script
+    copy:
+      src: login.sh
+      dest: /home/pi/login.sh
+      owner: pi
+      mode: 'u+x'
   - name: Copy healthcheck script
     copy:
       src: healthcheck.sh
